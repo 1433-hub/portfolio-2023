@@ -1,0 +1,32 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Theme css -->
+<link rel="stylesheet" type="text/css" href="{% static 'error/css/error-page.css' %}">
+<link rel="stylesheet" type="text/css" href="{% static 'error/css/error-page-responsive.css' %}">
+<section class="page-section">
+    <div class="full-width-screen">
+        <div class="container-fluid">
+            <div class="content-detail">
+                <img id="shape1" class="parallax" src="{% static 'images/error/shape1.png' %}">
+                <img id="shape2" class="parallax top" src="{% static 'images/error/shape2.png' %}">
+                <img id="shape4" class="parallax left top" src="{% static 'images/error/shape4.png' %}">
+                <img id="shape5" class="parallax left" src="{% static 'images/error/shape5.png' %}">
+                <img id="shape3" class="parallax top" src="{% static 'images/error/shape3.png' %}">
+                <img id="shape6" class="parallax top" src="{% static 'images/error/shape6.png' %}">
+                <img id="shape7" class="parallax" src="{% static 'images/error/shape7.png' %}">
+                <h1 class="global-title"><span>4</span><span>0</span><span>4</span></h1>
+                <h4 class="sub-title">Oops!</h4>
+                <p class="detail-text">We're sorry,<br> The page you were looking for doesn't exist anymore.</p>
+                <div class="back-btn">
+                    <a href="{% url 'home' %}" class="btn">Back to Home</a>
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+<script src="{% static 'error/js/jquery-3.5.1.min.js' %}"></script>
+<script src="{% static 'error/js/jquery.parallaxmouse.min.js' %}"></script>
+    <!-- Theme js-->
+<script src="{% static 'error/js/script.js' %}"></script>
+{% endblock content %}

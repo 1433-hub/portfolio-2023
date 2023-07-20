@@ -1,0 +1,160 @@
+/* CSS File 
+  ===================
+    Item Name: Erratum - 404 Error pages
+    Author: Ashish Maraviya
+    Version: 2.1
+    Copyright 2021-2022
+===================*/
+/*------------------------------------------------------------------
+  [ Master css file, Table of contents ]
+  
+  00. General css
+  01. Page css
+  
+------------------------------------------------------------*/
+/*------------------------------------------------------------------
+  # [Color codes]
+    color: #5076db;
+    color: #5bc86d;
+# */
+/*------------------------------------------------------------------
+  [Typography]
+  
+  Body copy:      font-family: 'Montserrat', sans-serif;
+-------------------------------------------------------------------*/
+/*==============
+  [00] Page General css
+=================*/
+body {
+  font-family: "Montserrat", sans-serif; }
+
+h1, h2, h3, h4, h5, h6 {
+  font-family: "Montserrat", sans-serif; }
+
+.loader-wrapper {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  background-color: #ffffff;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  align-items: center;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  justify-content: center;
+  position: fixed;
+  z-index: 9;
+  top: 0; }
+
+.loader {
+  border: 16px solid #111;
+  border-radius: 50%;
+  border-top: 16px double #adf3ce;
+  border-bottom: 16px double #adf3ce;
+  width: 80px;
+  height: 80px;
+  -webkit-animation: spin 2s linear infinite;
+  /* Safari */
+  animation: spin 2s linear infinite; }
+
+@-webkit-keyframes spin {
+  0% {
+    -webkit-transform: rotate(0deg); }
+  100% {
+    -webkit-transform: rotate(360deg); } }
+@keyframes spin {
+  0% {
+    transform: rotate(0deg); }
+  100% {
+    transform: rotate(360deg); } }
+/*==============
+  [01] Page css
+=================*/
+.page-section {
+  background-image: url("../images/background-3.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-position: center;
+  overflow: hidden;
+  position: relative; }
+  .page-section .content-detail {
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column; }
+    .page-section .content-detail .sub-title, .page-section .content-detail .detail-text {
+      display: block;
+      color: #777;
+      text-align: center; }
+    .page-section .content-detail .sub-title {
+      margin-bottom: 15px;
+      font-weight: 600;
+      font-size: 30px; }
+    .page-section .content-detail .global-title {
+      display: block;
+      color: #adf3ce;
+      font-size: 150px;
+      font-weight: 800; }
+      .page-section .content-detail .global-title span {
+        animation: animateblur 1s linear forwards; }
+        .page-section .content-detail .global-title span:nth-child(1) {
+          animation-delay: 1s; }
+        .page-section .content-detail .global-title span:nth-child(2) {
+          animation-delay: 2s; }
+        .page-section .content-detail .global-title span:nth-child(3) {
+          animation-delay: 3s; }
+@keyframes animateblur {
+  0% {
+    opacity: 0;
+    filter: blur(10px); }
+  100% {
+    opacity: 1;
+    filter: blur(0px); } }
+    .page-section .content-detail .back-btn {
+      margin-top: 15px; }
+      .page-section .content-detail .back-btn .btn {
+        padding: 8px 15px;
+        color: #6f8c7c;
+        background-color: #adf3ce;
+        border: 1px solid #b4e4ca;
+        border-radius: 30px;
+        font-size: 14px;
+        transition: all .3s ease-in-out;
+        box-shadow: 0px 5px 20px #e2e0e0;
+        z-index: 5;
+        position: relative; }
+        .page-section .content-detail .back-btn .btn:hover {
+          transition: all .3s ease-in-out;
+          /*background-color: #9fd2b7;*/
+          /*color: #fff;*/
+          border: 1px solid transparent;
+          box-shadow: none;
+          color: #686968; }
+    .page-section .content-detail .parallax {
+      position: absolute; }
+    .page-section .content-detail #shape1, .page-section .content-detail #shape2, .page-section .content-detail #shape3, .page-section .content-detail #shape4, .page-section .content-detail #shape5, .page-section .content-detail #shape6, .page-section .content-detail #shape7 {
+      opacity: .7; }
+    .page-section .content-detail #shape1 {
+      bottom: 20px;
+      right: 500px; }
+    .page-section .content-detail #shape2 {
+      top: 75px;
+      right: 581px; }
+    .page-section .content-detail #shape4 {
+      top: 40px;
+      left: 290px; }
+    .page-section .content-detail #shape5 {
+      bottom: 138px;
+      left: 170px; }
+    .page-section .content-detail #shape3 {
+      top: 300px;
+      right: 250px; }
+    .page-section .content-detail #shape6 {
+      top: 220px;
+      right: 100px; }
+    .page-section .content-detail #shape7 {
+      bottom: 10px;
+      right: 10px; }
+
+/*# sourceMappingURL=error-page.css.map */

@@ -1,0 +1,52 @@
+/* Responsive CSS File 
+  ===================
+    Item Name: Erratum - 404 Error pages
+    Author: Ashish Maraviya
+    Version: 2.1
+    Copyright 2021-2022
+===================*/
+@media (max-width: 768px) {
+  .page-section .content-detail {
+    padding: 0 15px; }
+    .page-section .content-detail .global-title {
+      font-size: 120px;
+      font-weight: 700; }
+    .page-section .content-detail .sub-title {
+      font-weight: 500;
+      font-size: 25px; }
+    .page-section .content-detail .detail-text {
+      font-size: 14px; }
+    .page-section .content-detail #shape1, .page-section .content-detail #shape2, .page-section .content-detail #shape3, .page-section .content-detail #shape4, .page-section .content-detail #shape5, .page-section .content-detail #shape6, .page-section .content-detail #shape7 {
+      opacity: .5; }
+    .page-section .content-detail #shape2 {
+      right: 150px; } }
+@media (max-width: 576px) {
+  .page-section .content-detail #shape1, .page-section .content-detail #shape2, .page-section .content-detail #shape3, .page-section .content-detail #shape4, .page-section .content-detail #shape5, .page-section .content-detail #shape6, .page-section .content-detail #shape7 {
+    opacity: .3; }
+  .page-section .content-detail #shape4 {
+    top: 30px;
+    left: 100px; }
+  .page-section .content-detail #shape6 {
+    top: 130px;
+    right: 50px; }
+  .page-section .content-detail #shape5 {
+    bottom: 25px;
+    left: 60px; }
+  .page-section .content-detail #shape1 {
+    display: none; } }
+@media (max-width: 480px) {
+  .page-section .content-detail {
+    padding: 0 15px; }
+    .page-section .content-detail .global-title {
+      font-size: 80px;
+      font-weight: 600; }
+    .page-section .content-detail .sub-title {
+      font-weight: 500;
+      font-size: 22px; } }
+@media (max-width: 360px) {
+  .page-section .content-detail #shape1, .page-section .content-detail #shape2, .page-section .content-detail #shape3, .page-section .content-detail #shape4, .page-section .content-detail #shape5, .page-section .content-detail #shape6, .page-section .content-detail #shape7 {
+    opacity: .2; }
+  .page-section .content-detail #shape2 {
+    display: none; } }
+
+/*# sourceMappingURL=error-page-responsive.css.map */
