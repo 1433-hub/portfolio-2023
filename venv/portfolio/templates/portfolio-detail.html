@@ -1,0 +1,144 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block content %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+    <!-- Section Started Heading -->
+    <section class="section section-inner started-heading">
+        <!-- Heading -->
+        <div class="container">
+            <div class="m-titles align-left">
+                <h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                    <span>{{ portfolio.title }}</span>
+                </h1>
+                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                    <span>{{ portfolio.type }}</span>
+                </div>
+            </div>
+        </div>
+        <!-- Details -->
+        <div class="v-line v-line-right v-line-top">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-8 col-lg-8">
+                        <div class="m-details">
+                            <div class="details-label">
+                                <span>Year:</span>
+                                <strong><span>{{ portfolio.created_at }}</span></strong>
+                            </div>
+                            <div class="details-label">
+                                <span>Technology:</span>
+                                <strong><span>{{ portfolio.technology_use }}</span></strong>
+                            </div>
+                            <div class="details-label">
+                                <span>Categories:</span>
+                                <strong><span>{{ portfolio.type }}</span></strong>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4 align-right">
+                        <a target="_blank" href="{{ portfolio.url }}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <span>Live Preview</span>
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Image -->
+    <div class="section section-inner">
+        <!-- Image -->
+        <div class="m-image-large">
+            <div class="image">
+                <div class="img js-parallax" style="background-image: url({{ portfolio.image.url }});"></div>
+            </div>
+        </div>
+    </div>
+    <!-- Section - Description -->
+    <section class="section section-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="post-content">
+                        <h4>Description</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="post-content">
+                        <p>{{ portfolio.description1 }}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="post-content">
+                        <p>{{ portfolio.description2 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Gallery -->
+    <div class="section section-inner">
+        <div class="container">
+            <!-- Section Gallery -->
+            <div class="m-gallery">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="works-item">
+                            <div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="img">
+                                    <a href="{{ portfolio.image1.url }}" class="has-popup-image"><img decoding="async" src="{{ portfolio.image1.url }}" alt="Item 1" loading="lazy"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="works-item">
+                            <div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="img">
+                                    <a href="{{ portfolio.image2.url}}" class="has-popup-image"><img decoding="async" src="{{ portfolio.image2.url }}" alt="Item 2" loading="lazy"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="works-item">
+                            <div class="image scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="img">
+                                    <a href="{{ portfolio.image3.url }}" class="has-popup-image"><img decoding="async" src="{{ portfolio.image3.url}}" alt="Item 3" loading="lazy"></a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- Section - Description -->
+    <section class="section section-inner">
+        <div class="container">
+            <div class="row">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                    <div class="post-content">
+                        <h4>Conclusion</h4>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="post-content">
+                        <p>{{ portfolio.conclusion1 }}</p>
+                    </div>
+                </div>
+                <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                    <div class="post-content">
+                        <p>{{ portfolio.conclusion2 }}</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+   
+    
+</div>
+
+{% endblock content %}

@@ -1,0 +1,65 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+
+<!-- Wrapper -->
+<div class="wrapper">
+    <!-- Section Started Heading -->
+    <section class="section section-inner started-heading">
+        <div class="container">
+            <!-- Heading -->
+            <div class="m-titles align-center">
+                <h1 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                    <span> Portfolio </span>
+                </h1>
+                <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                    <span> my <b>Cases</b>
+                    </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Works -->
+    <section class="lui-section">
+        <!-- Works -->
+        <div class="v-line v-line-right v-line-top">
+            <div class="container">
+                <div class="works-box">
+                    {% comment %} <div class="filter-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+                        <a href="#" class="lui-subtitle active" data-href=".works-col"> All </a>
+                        {% for type in types%}
+                        <a href="#" class="lui-subtitle" data-href=".sorting-{{ type.type }}">{{ type.type }}</a>
+                       {% endfor %}
+                    </div> {% endcomment %}
+                    <div class="works-items works-masonry-items row">
+                        {% for portfolio in portfolios %}
+                        <div class="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-{{ portfolio.type }}">
+                            <div class="works-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="image">
+                                    <div class="img">
+                                        <a href="{% url 'portoflioDetail' portfolio.slug %}">
+                                            <img decoding="async" src="{{ portfolio.image.url }}" alt="{{ portfolio.slug }}">
+                                            <span class="overlay"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <span class="category"> {{ portfolio.type }} </span>
+                                    <h5 class="name">
+                                        <a href="{% url 'portoflioDetail' portfolio.slug %}">{{ portfolio.title }}</a>
+                                    </h5>
+                                    <div class="text">
+                                        <p>{{ portfolio.description1|safe|truncatewords:"20"|linebreaks }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+
+{% endblock content %}

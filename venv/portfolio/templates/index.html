@@ -1,0 +1,508 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block content %}
+<!-- Wrapper -->
+<div class="wrapper">
+    <!-- Section - Hero Started -->
+    <section class="lui-section lui-section-hero lui-gradient-top" id="started-section">
+        <div class="container">
+            <!-- Hero Started -->
+            <div class="lui-started v-line v-line-left">
+                <div class="section hero-started">
+                    <div class="content scrolla-element-anim-1 scroll-animate" data-animate="active">
+                        <div class="titles">
+                            <div class="lui-subtitle">
+                                <span> Hello, <b>my name is</b>
+                                </span>
+                            </div>
+                            <h1 class="title splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
+                                <span style="font-size: 70px;">
+                                    <b>Gagan</b> Limbu </span>
+                            </h1>
+                            <div class="label lui-subtitle"> I am <strong>Web Developer</strong>
+                            </div>
+                        </div>
+                        <div class="description">
+                            <div>
+                                <p>Web Developer with 1+ years of experience in designing, developing, and maintaining web applications. Proven ability to work independently and as part of a team to deliver high-quality web products.</p>
+                            </div>
+                            <div class="social-links">
+                                <a target="_blank" rel="nofollow" href="https://www.facebook.com/toshiro.limbu.5/">
+                                    <i aria-hidden="true" class="fab fa-facebook"></i>
+                                </a>
+                                <a target="_blank" rel="nofollow" href="https://github.com/1433-hub">
+                                    <i aria-hidden="true" class="fab fa-github"></i>
+                                </a>
+                            </div>
+                        </div>
+                        <div class="bts">
+                            <a target="_blank" href="https://drive.google.com/" class="btn">
+                                <span>Download CV</span>
+                            </a>
+                            <a href="#skills-section" class="btn-lnk"> My Skills </a>
+                        </div>
+                    </div>
+                    <div class="slide scrolla-element-anim-1 scroll-animate" data-animate="active">
+                        <img decoding="async" src="{% static 'images/profile.jpg' %}" alt="&lt;b&gt;Zoé&lt;/b&gt; Miller">
+                        <span class="circle circle-1"></span>
+                        <!--                <span class="circle img-1" style="background-image: url(static/images/pat-1.png);"></span>-->
+                        <!--                <span class="circle img-2" style="background-image: url(assets/images/pat-2.png);"></span>-->
+                        <!--                <span class="circle img-3" style="background-image: url(assets/images/pat-2.png);"></span>-->
+                        <div class="info-list">
+                            <ul>
+                                <li>
+                                    <span class="num">1 <strong>+</strong>
+                                    </span>
+                                    <span class="value">Years of <strong>Experience</strong>
+                                    </span>
+                                </li>
+                                <li>
+                                    <span class="num">8</span>
+                                    <span class="value">Completed <strong>Projects</strong>
+                                    </span>
+                                </li>
+                            </ul>
+                        </div>
+                    </div>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Web Developer </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Services -->
+    <section class="lui-section lui-gradient-bottom" id="services-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> What I Do </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> my <b>Services</b> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Services -->
+        <div class="v-line v-line-right">
+            <div class="container">
+                <div class="swiper-container js-services scrolla-element-anim-1 scroll-animate" data-animate="active">
+                    <div class="swiper-wrapper">
+                        {% for service in services %}
+                        <div class="swiper-slide">
+                            <div class="services-item">
+                                <div class="lui-subtitle">
+                                    <span> {{ service.type }} </span>
+                                </div>
+                                <div class="icon"></div>
+                                <h5 class="lui-title">
+                                    <span> {{ service.title }} </span>
+                                </h5>
+                                <div class="lui-text">
+                                    <div> {{ service.description }} </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="swiper-pagination"></div>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Services </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Skills -->
+    <section class="lui-section lui-gradient-center" id="skills-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Professional Skills </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> my <b>Talent</b> </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Skills -->
+        <div class="v-line v-line-left">
+            <div class="container">
+                <div class="row">
+                    {% for skill in skills %}
+                    <div class="col-xs-12 col-sm-6 col-md-4 col-lg-4">
+                        <div class="skills-items">
+                            <div class="skills-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <h6 class="name">
+                                    <span> {{ skill.title }} </span>
+                                </h6>
+                                <div class="text">
+                                    <div>
+                                        <p> {{ skill.description }} </p>
+                                    </div>
+                                </div>
+                                <div class="dots">
+                                    <div class="dot" style="width: {{ skill.percentage }}%;">
+                                        <span></span>
+                                    </div>
+                                </div>
+                                <div class="value">
+                                    <span class="num">{{ skill.percentage }} <span>%</span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Skills </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Works -->
+    <section class="lui-section lui-gradient-top" id="works-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Portfolio </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> my <b>Cases</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Works -->
+        <div class="v-line v-line-right">
+            <div class="container">
+                <div class="works-box">
+                    {% comment %} <div class="filter-links scrolla-element-anim-1 scroll-animate" data-animate="active">
+                        <a href="#" class="lui-subtitle active" data-href=".works-col"> All </a>
+                        {% for type in types %}
+                        <a href="#" class="lui-subtitle" data-href=".sorting-{{ type.type }}"> {{ type.type }}</a>
+                        {% endfor %}
+                    </div> {% endcomment %}
+                    <div class="works-items works-masonry-items row">
+                        {% for portfolio in portfolios|slice:":3" %}
+                        <div class="works-col col-xs-12 col-sm-12 col-md-12 col-lg-12 sorting-{{ portfolio.type }}">
+                            <div class="works-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="image">
+                                    <div class="img">
+                                        <a href="{% url 'portoflioDetail' portfolio.slug %}">
+                                            <img decoding="async" src="{{ portfolio.image.url }}" alt="{{ portfolio.title }}">
+                                            <span class="overlay"></span>
+                                        </a>
+                                    </div>
+                                </div>
+                                <div class="desc">
+                                    <span class="category"> {{ portfolio.type }} </span>
+                                    <h5 class="name">
+                                        <a href="{{ portfolio.url }}">{{ portfolio.title }}</a>
+                                    </h5>
+                                    <div class="text">
+                                        <p>{{ portfolio.description1|safe|truncatewords:"20"|linebreaks }}</p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        {% endfor %}
+                    </div>
+                    <div class="load-more-link">
+                        <a href="{% url 'portfolio' %}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <span>View More</span>
+                        </a>
+                    </div>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Portfolio </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Resume -->
+    <section class="lui-section lui-gradient-bottom" id="resume-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Resume </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> my <b>Story</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- History -->
+        <div class="v-line v-line-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <h5 class="history-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <span> Education </span>
+                        </h5>
+                        <div class="history-items">
+                            {% for education in educations %}
+                            <div class="history-item lui-collapse-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <h6 class="name lui-collapse-btn active">
+                                    <span> {{ education.course }} </span>
+                                </h6>
+                                <div class="history-content">
+                                    <div class="subname">
+                                        <span> {{ education.school }} </span>
+                                    </div>
+                                    <div class="date lui-subtitle">
+                                        <span> {{ education.start_date }} - {{ education.end_date }} </span>
+                                    </div>
+                                    <div class="text">
+                                        <div>
+                                            <p>{{ education.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <h5 class="history-title scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <span> Experience </span>
+                        </h5>
+                        <div class="history-items">
+                            {% for experience in experiences %}
+                            <div class="history-item lui-collapse-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <h6 class="name lui-collapse-btn active">
+                                    <span> {{ experience.designation }} </span>
+                                </h6>
+                                <div class="history-content">
+                                    <div class="subname">
+                                        <span> {{ experience.company }} </span>
+                                    </div>
+                                    <div class="date lui-subtitle">
+                                        <span> {{ experience.start_date }} - <b>{{ experience.end_date }}</b>
+                                        </span>
+                                    </div>
+                                    <div class="text">
+                                        <div>
+                                            <p>{{ experience.description }}</p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            {% endfor %}
+                        </div>
+                    </div>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> History </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Blog -->
+    <section class="lui-section lui-gradient-top" id="blog-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Latest Blog </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> my <b>Articles and Advice</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Archive -->
+        <div class="v-line v-line-right">
+            <div class="container">
+                <div class="blog-items row">
+                    {% for blog in blogs|slice:":3" %}
+                    <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                        <div class="archive-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <div class="image">
+                                <a href="{% url 'blog-detail' blog.slug %}">
+                                    <img decoding="async" src="{{ blog.image.url }}" alt="{{ blog.title }}">
+                                </a>
+                            </div>
+                            <div class="desc">
+                                <div class="category lui-subtitle">
+                                    <span>{{ blog.start_date }}</span>
+                                </div>
+                                <h5 class="lui-title">
+                                    <a href="{% url 'blog-detail' blog.slug %}">{{ blog.title }}</a>
+                                </h5>
+                                <div class="lui-text">
+                                    <p>{{ blog.description1|safe|truncatewords:"30"|linebreaks }}</p>
+                                    <div class="readmore">
+                                        <a href="{% url 'blog-detail' blog.slug %}" class="lnk">Read more</a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    {% endfor %}
+                </div>
+                <div class="load-more">
+                    <a href="{% url 'blog' %}" class="btn scrolla-element-anim-1 scroll-animate" data-animate="active">
+                        <span>View Blog</span>
+                    </a>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Blog </span>
+                </div>
+            </div>
+        </div>
+    </section>
+    <!-- Section - Contacts -->
+    <section class="lui-section lui-gradient-bottom" id="contact-section">
+        <!-- Heading -->
+        <div class="lui-heading">
+            <div class="container">
+                <div class="m-titles align-center">
+                    <h2 class="m-title splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Contact Me </span>
+                    </h2>
+                    <div class="m-subtitle splitting-text-anim-1 scroll-animate" data-splitting="words" data-animate="active">
+                        <span> Let’s <b>Talk About Ideas</b>
+                        </span>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Contact -->
+        <div class="lui-contacts v-line v-line-left">
+            <div class="container">
+                <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-5 col-lg-5">
+                        <div class="numbers-items">
+                            <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="icon">
+                                    <i aria-hidden="true" class="far fa-map"></i>
+                                </div>
+                                <div class="title">
+                                    <span> Address </span>
+                                </div>
+                                <div class="lui-text">
+                                    <span> Dharan, Sunsari, Nepal </span>
+                                </div>
+                            </div>
+                            <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="icon">
+                                    <i aria-hidden="true" class="far fa-user"></i>
+                                </div>
+                                <div class="title">
+                                    <span> Freelance </span>
+                                </div>
+                                <div class="lui-text">
+                                    <span> Available Right Now </span>
+                                </div>
+                            </div>
+                            <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="icon">
+                                    <i aria-hidden="true" class="far fa-envelope"></i>
+                                </div>
+                                <div class="title">
+                                    <span> Email </span>
+                                </div>
+                                <div class="lui-text">
+                                    <span> gaganlimbuuu@gmail.com </span>
+                                </div>
+                            </div>
+                            <div class="numbers-item scrolla-element-anim-1 scroll-animate" data-animate="active">
+                                <div class="icon">
+                                    <i aria-hidden="true" class="far fa-address-book"></i>
+                                </div>
+                                <div class="title">
+                                    <span> Phone </span>
+                                </div>
+                                <div class="lui-text">
+                                    <span> +977 9814339257 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="col-xs-12 col-sm-12 col-md-7 col-lg-7">
+                        <div class="contacts-form scrolla-element-anim-1 scroll-animate" data-animate="active">
+                            <div class="contacts-form">
+                                <form class="form-group" method="post" action="{% url 'home' %}">
+                                    {% csrf_token %}
+                                    {% if messages %}
+                                    {% for message in messages %}
+                                    <div class="alert {{ message.tags }} alert-dismissible" role="alert">
+                                        {{ message }}
+                                    </div>
+                                    {% endfor %}
+                                    {% endif %}
+                                    <div class="row">
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="group">
+                                                <label>
+                                                    Your Full Name <b>*</b>
+                                                    <input class="form__input" type="text" name="username" id="username">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-6 col-md-6 col-lg-6">
+                                            <div class="group">
+                                                <label>
+                                                    Your Email Address <b>*</b>
+                                                    <input class="form__input" type="email" name="email" id="email">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="group">
+                                                <label>
+                                                    Your Subject <b>*</b>
+                                                    <input class="form__input" type="text" name="subject" id="subject">
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                                            <div class="group">
+                                                <label>
+                                                    Your Message <b>*</b>
+                                                    <textarea class="form__input" name="message" id="message"></textarea>
+                                                </label>
+                                            </div>
+                                        </div>
+                                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 align-right">
+                                            <div class="terms-label">* Accept the terms and conditions.</div>
+                                            <input type="submit" class="btn" value="Send Message">
+                                            <!--                                            <button class="btn" type="submit">-->
+                                            <!--                                                <span>Send Message</span>-->
+                                            <!--                                            </button>-->
+                                        </div>
+                                    </div>
+                                </form>
+                                <div class="alert-success" style="display: none;">
+                                    <p>Thanks, your message is sent successfully.</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="lui-bgtitle">
+                    <span> Contact Me </span>
+                </div>
+            </div>
+        </div>
+    </section>
+</div>
+{% endblock content %}
