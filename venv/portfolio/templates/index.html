@@ -17,33 +17,33 @@
                             </div>
                             <h1 class="title splitting-text-anim-1 scroll-animate" data-splitting="chars" data-animate="active">
                                 <span style="font-size: 70px;">
-                                    <b>Gagan</b> Limbu </span>
+                                    <b>{{ profile.first_name }}</b> {{ profile.last_name }} </span>
                             </h1>
-                            <div class="label lui-subtitle"> I am <strong>Web Developer</strong>
+                            <div class="label lui-subtitle"> I am <strong>{{ profile.designation }}</strong>
                             </div>
                         </div>
                         <div class="description">
                             <div>
-                                <p>Web Developer with 1+ years of experience in designing, developing, and maintaining web applications. Proven ability to work independently and as part of a team to deliver high-quality web products.</p>
+                                <p>{{ profile.overview }}</p>
                             </div>
                             <div class="social-links">
-                                <a target="_blank" rel="nofollow" href="https://www.facebook.com/toshiro.limbu.5/">
+                                <a target="_blank" rel="nofollow" href="{{ profile.facebook_url }}">
                                     <i aria-hidden="true" class="fab fa-facebook"></i>
                                 </a>
-                                <a target="_blank" rel="nofollow" href="https://github.com/1433-hub">
+                                <a target="_blank" rel="nofollow" href="{{ profile.github_url }}">
                                     <i aria-hidden="true" class="fab fa-github"></i>
                                 </a>
                             </div>
                         </div>
                         <div class="bts">
-                            <a target="_blank" href="https://drive.google.com/" class="btn">
+                            <a target="_blank" href="{{ profile.cv.url }}" download="{{ profile.cv.url }}" class="btn">
                                 <span>Download CV</span>
                             </a>
                             <a href="#skills-section" class="btn-lnk"> My Skills </a>
                         </div>
                     </div>
                     <div class="slide scrolla-element-anim-1 scroll-animate" data-animate="active">
-                        <img decoding="async" src="{% static 'images/profile.jpg' %}" alt="&lt;b&gt;Zoé&lt;/b&gt; Miller">
+                        <img decoding="async" src="{{ profile.profilepicture.url }}" alt="{{ profile.first_name }}{{ profile.last_name }}">
                         <span class="circle circle-1"></span>
                         <!--                <span class="circle img-1" style="background-image: url(static/images/pat-1.png);"></span>-->
                         <!--                <span class="circle img-2" style="background-image: url(assets/images/pat-2.png);"></span>-->
@@ -51,13 +51,13 @@
                         <div class="info-list">
                             <ul>
                                 <li>
-                                    <span class="num">1 <strong>+</strong>
+                                    <span class="num">{{ profile.experience }} <strong>+</strong>
                                     </span>
                                     <span class="value">Years of <strong>Experience</strong>
                                     </span>
                                 </li>
                                 <li>
-                                    <span class="num">8</span>
+                                    <span class="num">{{ profile.project }}</span>
                                     <span class="value">Completed <strong>Projects</strong>
                                     </span>
                                 </li>
@@ -66,7 +66,7 @@
                     </div>
                 </div>
                 <div class="lui-bgtitle">
-                    <span> Web Developer </span>
+                    <span> {{ profile.designation }} </span>
                 </div>
             </div>
         </div>
@@ -266,11 +266,6 @@
                                     </div>
                                     <div class="date lui-subtitle">
                                         <span> {{ education.start_date }} - {{ education.end_date }} </span>
-                                    </div>
-                                    <div class="text">
-                                        <div>
-                                            <p>{{ education.description }}</p>
-                                        </div>
                                     </div>
                                 </div>
                             </div>

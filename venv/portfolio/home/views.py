@@ -21,6 +21,7 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
+        profile = ProfileInfo.objects.get(pk=1)
         type = Type.objects.all()
         service = Services.objects.all().order_by('-id')
         skill = Skill.objects.all().order_by('-id')
@@ -36,7 +37,8 @@ class HomeView(TemplateView):
                         'educations': education,
                         'experiences': experiecne,
                         'blogs': blog,
-                        'types': type
+                        'types': type,
+                        'profile': profile,
                         })
         return context
     # error comming in message

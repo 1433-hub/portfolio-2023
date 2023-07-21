@@ -2,6 +2,21 @@ from django.db import models
 # Create your models here.
 
 
+class ProfileInfo(models.Model):
+    first_name = models.CharField(max_length=150)
+    last_name = models.CharField(max_length=150)
+    designation = models.CharField(max_length=200)
+    overview = models.TextField()
+    profilepicture = models.ImageField(upload_to='profilepicture')
+    experience = models.PositiveIntegerField()
+    project = models.PositiveIntegerField()
+    facebook_url = models.URLField(max_length=300)
+    github_url = models.URLField(max_length=300)
+    cv = models.FileField()
+
+    def __str__(self):
+        return self.first_name
+
 class Type(models.Model):
     type = models.CharField(max_length=100, default='Web Development', null=True, unique=True)
     slug = models.SlugField(null=False, unique=True)
@@ -49,7 +64,6 @@ class Education(models.Model):
     school = models.CharField(max_length=400)
     start_date = models.CharField(max_length=200)
     end_date = models.CharField(max_length=200)
-    description = models.TextField()
 
     def __str__(self):
         return self.school
