@@ -21,7 +21,13 @@ class HomeView(TemplateView):
 
     def get_context_data(self, **kwargs):
         context = super().get_context_data(**kwargs)
-        profile = ProfileInfo.objects.get(pk=1)
+        profileDetail = ProfileInfo.objects.all()
+        if profileDetail.exists():
+            profile = ProfileInfo.objects.get(pk=1)
+            context['profile'] = profile
+        else:
+            pass
+
         type = Type.objects.all()
         service = Services.objects.all().order_by('-id')
         skill = Skill.objects.all().order_by('-id')
@@ -38,7 +44,6 @@ class HomeView(TemplateView):
                         'experiences': experiecne,
                         'blogs': blog,
                         'types': type,
-                        'profile': profile,
                         })
         return context
     # error comming in message
@@ -105,7 +110,6 @@ class BlogView(TemplateView):
         page_number = self.request.GET.get('page')
         blog_list = paginator.get_page(page_number)
         context['bloglist'] = blog_list
-
         search_keyword = self.request.GET.get('search')
         if search_keyword:
             print("search keyword: ",search_keyword)
